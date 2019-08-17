@@ -10,46 +10,56 @@
 </head>
 
 <body>
+<div class="container">
     <header class="company-header">
-        <ul class="header-contacts">
-            <li class="header-adress">111024, г. Москва, ул. Авиамоторная, д. 55, корп. 31.</li>
-            <li class="header-email"><a href="mailto:auditexpbiz@yandex.ru">auditexpbiz@yandex.ru</a></li>
-            <li class="header-phone">+7(495) 544-41-72</li>
-            <li class="header-fax">+7(495) 544-41-73</li>
-        </ul>
-        <a href="index.html" title="Перейти на главную страницу" class="logo"><img src="img/logo-audit.png" width="209"
-                alt="логотип Аудит-Эксперт Бизнес"></a>
-        <nav class="main-menu">
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li>
-                    <a href="company.html">О компании</a>
-                    <ul class="sub-menu">
-                        <li><a href="team.html">Наша команда</a></li>
-                        <li><a href="licence.html">Лицензии и свидетельства</a></li>
-                        <li><a href="customers.html">Клиенты</a></li>
-                        <li><a href="partners.html">Партнеры</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="services.html">Услуги</a>
-                    <ul class="sub-menu">
-                        <li><a href="audit.html">Общий аудит</a></li>
-                        <li><a href="accounting.html">Бухгалтерский учет</a></li>
-                        <li><a href="mconsulting.html">Управленческий консалтинг</a></li>
-                        <li><a href="taxconsulting.html">Налоговый консалтинг</a></li>
-                        <li><a href="fea.html">Финансово-экономический анализ</a></li>
-                        <li><a href="bconsulting.html">Бизнес-консультирование</a></li>
-                        <li><a href="cas.html">Консультационное абонентское обслуживание</a></li>
-                        <li><a href="bpm.html">Моделирование бизнес-процессов</a></li>
-                    </ul>
-                </li>
-                <li><a href="news.html">Новости</a></li>
-                <li><a href="vacancies.html">Вакансии</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
+        <button type="button" class="arrow-up"></button>
+        <header class="main-header">
+            <ul class="header-contacts">
+                <li class="header-adress">111024, г. Москва, ул. Авиамоторная, д. 55, корп. 31.</li>
+                <li class="header-email"><a href="mailto:auditexpbiz@yandex.ru">auditexpbiz@yandex.ru</a></li>
+                <li class="header-phone">+7(495) 544-41-72</li>
+                <li class="header-fax">+7(495) 544-41-73</li>
             </ul>
-        </nav>
-    </header>
+            <div class="header-container">
+                <a href="index.html" title="Перейти на главную страницу" class="logo"><img src="img/logo-audit.png"
+                                                                                           width="209"
+                                                                                           alt="логотип Аудит-Эксперт Бизнес"></a>
+                <nav class="main-menu">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li class="parent-item">
+                            <a href="company.html">О компании</a>
+                            <ul class="sub-menu">
+                                <li><a href="team.html">Наша команда</a></li>
+                                <li><a href="licence.html">Лицензии и свидетельства</a></li>
+                                <li><a href="customers.html">Клиенты</a></li>
+                                <li><a href="partners.html">Партнеры</a></li>
+                            </ul>
+                        </li>
+                        <li class="parent-item current-item">
+                            <a href="services.html">Услуги</a>
+                            <ul class="sub-menu">
+                                <li><a href="audit.html">Общий аудит</a></li>
+                                <li><a href="accounting.html">Бухгалтерский учет</a></li>
+                                <li><a href="mconsulting.html">Управленческий консалтинг</a></li>
+                                <li><a href="taxconsulting.html">Налоговый консалтинг</a></li>
+                                <li><a href="fea.html">Финансово-экономический анализ</a></li>
+                                <li><a href="bconsulting.html">Бизнес-консультирование</a></li>
+                                <li><a href="cas.html">Консультационное абонентское обслуживание</a></li>
+                                <li><a href="bpm.html">Моделирование бизнес-процессов</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="news.html">Новости</a></li>
+                        <li><a href="vacancies.html">Вакансии</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <section class="second-slider">
+                <div class="second-slide-first">
+                </div>
+            </section>
+        </header>
     <main class="main-third-page">
         <h1>Консультационное абонентское обслуживание</h1>
         <ul class="breadcrumbs">
@@ -58,6 +68,10 @@
             <li class="breadcrumbs-current">/ Консультационное абонентское обслуживание</li>
         </ul>
         <section class="main-cas">
+            <div class="cas-article">
+                <div class="cas-photo"></div>
+                <div class="cas-text">
+                    <h2>Консультационное абонентское обслуживание по учету, налогам и праву</h2>
             <p>Практическое применение новых положений Налогового кодекса РФ вызывает множество вопросов у бухгалтерских работников,  таких как:</p>
 
             <ul>
@@ -67,39 +81,42 @@
                 <li>правильность исчисления налогов.</li>
             </ul>            
             <p>Зачастую налогоплательщики получают от налоговых органов различные требования и решения, в которых налоговые органы неправомерно осуществляют доначисление налогов и пеней, а также иным образом ограничивают их права. Специалисты компании  помогут в судебном порядке признать данные акты недействительными и не подлежащими исполнению.</p>
+                </div>
+            </div>
         </section>
 
     </main>
     <footer class="footer">
-        <div class="footer-logo">
-            <a href="index.html" title="Перейти на главную страницу" class="logo"><img src="img/logo-audit-gray.png"
-                    width="209" alt="логотип Аудит-Эксперт Бизнес"></a>
-            <p>Независимо от того, с кем из наших сотрудников Вы работаете, независимо от того, организацию какого
-                размера Вы представляете, Вы можете быть уверены в том, что мы предложим Вам лучшие решения стоящих
-                перед Вами задач.</p>
-            <p>© ООО "Аудит-Эксперт Бизнес", 2006-2019</p>
-        </div>
-        <div>
-            <h3>Навигация</h3>
-            <ul class="footer-navigation">
-                <li><a href="company.html">О компании</a></li>
-                <li><a href="services.html">Услуги</a></li>
-                <li><a href="news.html">Новости</a></li>
-                <li><a href="vacancies.html">Вакансии</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </div>
-        <div class="footer-contacts">
-            <h3>Контактная информация</h3>
-            <p>111024, г. Москва, ул. Авиамоторная, д. 55, корп. 31.</p>
-            <a href="mailto:auditexpbiz@yandex.ru">auditexpbiz@yandex.ru</a>
-        </div>
-        <div>
-            <h3>График работы</h3>
-            <p>Пнд-Птн: 10:00 - 17:00.</p>
-            <a href="mailto:auditexpbiz@yandex.ru"></a>
-        </div>
-    </footer>
+    <div class="footer-logo">
+        <a href="index.html" title="Перейти на главную страницу" class="logo"><img src="img/logo-audit-gray.png"
+                                                                                   width="209"
+                                                                                   alt="логотип Аудит-Эксперт Бизнес"></a>
+        <p>Независимо от того, с кем из наших сотрудников Вы работаете, независимо от того, организацию какого
+            размера Вы представляете, Вы можете быть уверены в том, что мы предложим Вам лучшие решения стоящих
+            перед Вами задач.</p>
+        <p>© ООО "Аудит-Эксперт Бизнес", 2006-2019</p>
+    </div>
+    <div class="footer-nav">
+        <h3>Навигация</h3>
+        <ul class="footer-navigation">
+            <li><a href="company.html">О компании</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="vacancies.html">Вакансии</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+    </div>
+    <div class="footer-contacts">
+        <h3>Контактная информация</h3>
+        <p>111024, г. Москва, ул. Авиамоторная, д. 55, корп. 31.</p>
+        <a href="mailto:auditexpbiz@yandex.ru">auditexpbiz@yandex.ru</a>
+    </div>
+    <div class="work-schedule">
+        <h3>График работы</h3>
+        <p>Пнд-Птн: 10:00 - 17:00.</p>
+        <a href="mailto:auditexpbiz@yandex.ru"></a>
+    </div>
+</footer>
     <div class="move-up"></div>
-
+</div>
 </body>

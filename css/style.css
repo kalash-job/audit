@@ -53,11 +53,12 @@ a {
         background-position: center 45%;
         width: 42px;
         height: 42px;
-        right: 40px;
+        right: 23%;
         bottom: 80px;
         border-radius: 50%;
         border-color: transparent;
         transition-duration: 0.7s;
+        z-index: 25;
     }
 
     .arrow-up:hover {
@@ -77,6 +78,10 @@ a {
         width: 100%;
         height: 100%;
         z-index: -10;
+    }
+
+    .arrow-up {
+        right: 7%;
     }
 }
 
@@ -311,7 +316,7 @@ li.current-item {
     width: auto;
     display: none;
     background-color: #373d43;
-    z-index: 10;
+    z-index: 25;
 }
 
 .sub-menu li {
@@ -359,8 +364,8 @@ li.current-item {
         text-align: left;
         min-height: 20px;
         vertical-align: center;
-        padding-top: 46px;
-        padding-bottom: 46px;
+        padding-top: 4px;
+        padding-bottom: 5px;
         width: auto;
         border: none;
     }
@@ -376,7 +381,7 @@ li.current-item {
     .main-menu a {
         display: block;
         margin-left: -1px;
-        padding: 8px 10px;
+        padding: 5px 10px;
         text-transform: uppercase;
         font-size: 14px;
         font-weight: 700;
@@ -396,8 +401,7 @@ li.current-item {
         width: auto;
         display: none;
         background-color: #373d43;
-        z-index: 10;
-
+        z-index: 25;
     }
 
     .sub-menu li {
@@ -413,10 +417,10 @@ li.current-item {
 
     @keyframes flying {
         0% {
-            top: 158px;
+            top: 69px;
         }
         100% {
-            top: 138px;
+            top: 49px;
         }
     }
     .main-menu ul > li:hover .sub-menu {
@@ -430,7 +434,7 @@ li.current-item {
         content: '';
         position: absolute; /* Абсолютное позиционирование */
         left: 45%;
-        bottom: -5px; /* Положение треугольника */
+        bottom: 0; /* Положение треугольника */
         border: 5px solid transparent; /* Прозрачные границы */
         border-top: 5px solid #ffffff; /* Добавляем треугольник */
     }
@@ -442,6 +446,26 @@ li.current-item {
     }
 }
 
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .main-menu > ul > li {
+        padding-top: 46px;
+        padding-bottom: 46px;
+    }
+
+    .main-menu a {
+        padding: 8px 10px;
+    }
+
+    @keyframes flying {
+        0% {
+            top: 158px;
+        }
+        100% {
+            top: 138px;
+        }
+    }
+}
 
 /*MAIN*/
 
@@ -1049,21 +1073,26 @@ p.first-paragraph {
 
 /* Десктопная версия 1*/
 @media (min-width: 1200px) {
-    .have-questions {
+    .questions-block {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .questions {
-        margin-right: 40px;
-        margin-left: 214px;
-        width: 350px;
+    .questions-block p {
+        width: 310px;
     }
 
-    .questions-opening-hours {
-        margin-left: 40px;
-        margin-right: 214px;
+    .questions-block p:nth-child(2) {
+        width: 400px;
+    }
+
+    .questions-block p > a {
+        font-size: 50px;
+        line-height: 70px;
     }
 }
 
@@ -1077,6 +1106,7 @@ p.first-paragraph {
     line-height: 18px;
     font-weight: 400;
     padding: 10px;
+    padding-top: 50px;
 }
 
 .footer-logo p {
@@ -1097,6 +1127,7 @@ p.first-paragraph {
     font-weight: 700;
     text-transform: uppercase;
     color: #ffffff;
+    margin-block-start: 0;
 }
 
 .footer-navigation {
@@ -1148,19 +1179,97 @@ p.first-paragraph {
 
 /*Страница О Компании*/
 
+/*Header*/
+
+
+.second-slider {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 687px;
+    justify-content: center;
+    z-index: 0;
+}
+
+.second-slide-first {
+    position: relative;
+    background-color: #f0f2f1;
+    background-image: url("../img/slide1.jpg");
+    /*background-position: center 0;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    z-index: 0;
+}
+
+
+/* Планшетная версия */
+@media (min-width: 768px) {
+    .second-slider {
+        width: 640px;
+    }
+}
+
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .second-slider {
+        width: 100%;
+    }
+}
+
+.main-second-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: -349px;
+    background-color: #f0f2f1;
+    z-index: 0;
+}
+
 .main-second-page h1 {
-    font-size: 40px;
-    line-height: 58px;
+    font-size: 24px;
+    line-height: 36px;
     font-weight: 400;
     color: #414141;
     text-transform: uppercase;
     text-align: left;
     background-color: #f0f2f1;
+    padding-left: 5px;
+}
+
+/* Планшетная версия */
+@media (min-width: 768px) {
+    .main-second-page {
+        margin-top: -378px;
+    }
+
+    .main-second-page h1 {
+        font-size: 30px;
+        line-height: 48px;
+    }
+}
+
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .main-second-page {
+        margin-top: -498px;
+    }
+
+    .main-second-page h1 {
+        font-size: 40px;
+        line-height: 58px;
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-block-start: 55px;
+        margin-block-end: 16px;
+    }
 }
 
 .breadcrumbs, .breadcrumbs a {
     margin: 0;
     padding: 0;
+    padding-left: 5px;
     list-style: none;
     text-align: left;
     font-size: 14px;
@@ -1169,8 +1278,16 @@ p.first-paragraph {
     background-color: #f0f2f1;
 }
 
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #bec1c5;
+    border-bottom: 1px solid #bec1c5;
+}
+
 .breadcrumbs-current {
     color: #bec1c5;
+    margin-left: 5px;
 }
 
 .history {
@@ -1178,8 +1295,19 @@ p.first-paragraph {
     line-height: 24px;
     font-weight: 400;
     text-align: left;
-    color: #909090;
+    color: #414141;
     background-color: #f0f2f1;
+    padding-left: 5px;
+    padding-bottom: 20px;
+}
+
+.history-article {
+    display: flex;
+    flex-direction: column;
+}
+
+.history-text {
+    width: 320px;
 }
 
 .history h2 {
@@ -1187,6 +1315,59 @@ p.first-paragraph {
     font-weight: 700;
     color: #64a0bc;
     text-transform: uppercase;
+}
+
+.history-img {
+    position: relative;
+    background-image: url("../img/layer-2322.jpg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    z-index: 30;
+    width: 370px;
+    height: 279px;
+    margin-bottom: -15%;
+}
+
+/* Планшетная версия */
+@media (min-width: 768px) {
+    .history-img {
+        background-size: cover;
+        margin-bottom: 0;
+    }
+
+    .history-text {
+        width: 620px;
+    }
+}
+
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .breadcrumbs {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .history {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 70px;
+    }
+
+    .history-article {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .history-img {
+        margin-right: 29px;
+        margin-top: 18px;
+    }
+
+    .history-text {
+        width: 790px;
+    }
 }
 
 .principles-strategy {
@@ -1212,6 +1393,49 @@ p.first-paragraph {
     text-transform: uppercase;
 }
 
+.principles-and-strategy {
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .principles-strategy {
+        padding-top: 65px;
+        padding-bottom: 55px;
+    }
+
+    .principles-and-strategy {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .principles,
+    .strategy {
+        width: 560px;
+    }
+
+    .principles-and-strategy {
+        text-align: left;
+    }
+
+    .principles-and-strategy h3 {
+        margin-block-start: 10px;
+    }
+
+    .principles-strategy h2 {
+        width: 1174px;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
 .sub-catalogs h2 {
     color: #414141;
     font-size: 40px;
@@ -1235,6 +1459,27 @@ p.first-paragraph {
     color: #909090;
 }
 
+.team-photo {
+    background-image: url("../img/layer-2325.jpg");
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 200px;
+}
+
+.licence-photo {
+    background-image: url("../img/layer-2323.jpg");
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 200px;
+}
+
+.customers-photo {
+    background-image: url("../img/layer-2328.jpg");
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 200px;
+}
+
 .button-turquoise {
     width: 90px;
     padding: 2px 10px 2px 10px;
@@ -1247,13 +1492,48 @@ p.first-paragraph {
     text-shadow: none;
     margin: 0 auto;
     border-radius: 4px;
+    margin-bottom: 70px;
+    margin-top: 20px;
 }
 
 .button-turquoise:hover {
     background-color: #bec1c5;
 }
 
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .sub-catalogs {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .more-about-company {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 5px;
+    }
+
+    .company-team,
+    .company-licence,
+    .company-customers {
+        width: 340px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sub-catalogs h2 {
+        margin-block-start: 100px;
+    }
+
+    .more-about-company h3 {
+        margin-block-start: 30px;
+        margin-block-end: 0;
+    }
+}
+
 .comments {
+    position: relative;
     background-color: #4483a4;
     color: #ffffff;
     font-weight: 700;
@@ -1261,19 +1541,63 @@ p.first-paragraph {
     line-height: 24px;
     text-align: left;
     text-shadow: 0.5px 0.9px 0 rgba(0, 0, 0, 0.06);
+
+
+    background-color: rgba(58, 116, 143, 0.5);
+    width: 100%;
+    height: 100%;
+
 }
 
-.comments h2, .fingers {
+.comments-layer {
+    position: absolute;
+    top: 0;
+    background-color: #4483a4;
+    background-image: url("../img/layer-finger.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 60%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.comments-of-clients {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    justify-content: space-between;
+    align-items: start;
+    padding-top: 45px;
+    padding-bottom: 82px;
+}
+
+.comments h2 {
     font-size: 36px;
     line-height: 48px;
     text-shadow: 0.5px 0.9px 0 rgba(0, 0, 0, 0.13);
     text-transform: uppercase;
+    margin-block-start: 10px;
 }
 
 .comments b {
     text-transform: uppercase;
     color: #8bd9ff;
     text-shadow: none;
+}
+
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .comments-of-clients {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .comments-of-clients div,
+    .comments-of-clients h2 {
+        width: 340px;
+    }
 }
 
 /*Страница второго уровня вложенности (тип 2) */
@@ -1284,6 +1608,14 @@ p.first-paragraph {
     background-color: #f0f2f1;
 }
 
+.main-services > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 0;
+    margin-top: 45px;
+}
+
 .main-services > ul > li {
     margin: 0;
     padding: 0;
@@ -1292,6 +1624,85 @@ p.first-paragraph {
     color: #ffffff;
     font-size: 16px;
     line-height: 24px;
+    text-align: left;
+    width: 310px;
+    margin-bottom: 30px;
+}
+
+.main-services ul ul > li {
+    padding-right: 10px;
+}
+
+.services-audit div {
+    background-image: url("../img/audit.jpg");
+    background-size: 310px auto;
+    background-repeat: no-repeat;
+    width: 570px;
+    height: 283px;
+    margin-bottom: -130px;
+}
+
+.services-accounting div {
+    background-image: url("../img/services-accounting.jpg");
+    background-size: 310px auto;
+    background-repeat: no-repeat;
+    width: 570px;
+    height: 283px;
+    margin-bottom: -130px;
+}
+
+.services-mconsulting div {
+    background-image: url("../img/services-mconsulting.jpg");
+    background-size: 310px auto;
+    background-repeat: no-repeat;
+    width: 370px;
+    height: 245px;
+    margin-bottom: -40px;
+}
+
+.services-taxconsulting div {
+    background-image: url("../img/services-taxconsulting.jpg");
+    background-size: 310px auto;
+    background-repeat: no-repeat;
+    width: 370px;
+    height: 245px;
+    margin-bottom: -40px;
+}
+
+.services-fea div {
+    background-image: url("../img/services-fea.jpg");
+    background-size: 310px auto;
+    background-repeat: no-repeat;
+    width: 370px;
+    height: 245px;
+    margin-bottom: -40px;
+}
+
+.services-bconsulting div {
+    background-image: url("../img/services-bconsulting.jpg");
+    background-size: 310px auto;
+    background-repeat: no-repeat;
+    width: 370px;
+    height: 245px;
+    margin-bottom: -40px;
+}
+
+.services-cas div {
+    background-image: url("../img/services-cas.jpg");
+    background-size: 310px auto;
+    background-repeat: no-repeat;
+    width: 370px;
+    height: 245px;
+    margin-bottom: -40px;
+}
+
+.services-bpm div {
+    background-image: url("../img/services-bpm.jpg");
+    background-size: 310px auto;
+    background-repeat: no-repeat;
+    width: 370px;
+    height: 245px;
+    margin-bottom: -40px;
 }
 
 .main-services h2 {
@@ -1300,61 +1711,194 @@ p.first-paragraph {
     font-weight: 700;
     font-size: 18px;
     text-align: left;
+    padding-left: 19px;
+    padding-right: 10px;
+}
+
+.main-services p {
+    margin-left: 20px;
+}
+
+.main-services .button {
+    margin-left: 20px;
+    margin-bottom: 33px;
+}
+
+/* Планшетная версия */
+@media (min-width: 768px) {
+
+}
+
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .main-services {
+        width: 1174px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .main-services > ul > li {
+        width: 370px;
+    }
+
+    .main-services li.services-audit,
+    .main-services li.services-accounting {
+        width: 570px;
+    }
+
+    .main-services li div {
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 30px;
+    }
+
+    .services-audit div,
+    .services-accounting div {
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 30px;
+    }
+
 }
 
 /*Страница третьего уровня вложенности (тип 1) */
 
 /*Страница Наша команда*/
 
-.main-third-page {
-    background-color: #f0f2f1;
-}
+/*Header*/
 
 .main-third-page h1 {
-    font-size: 40px;
-    line-height: 58px;
+    font-size: 24px;
+    line-height: 36px;
     font-weight: 400;
     color: #414141;
     text-transform: uppercase;
     text-align: left;
+    padding-left: 5px;
 }
 
-.main-team h2 {
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 700;
-    text-align: left;
-    color: #64a0bc;
-    text-transform: uppercase;
+
+.main-third-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: -349px;
+    z-index: 0;
+    background-color: #f0f2f1;
 }
 
-.main-team p, .main-team li {
+/* Планшетная версия */
+@media (min-width: 768px) {
+    .main-third-page {
+        margin-top: -378px;
+    }
+
+    .main-third-page h1 {
+        font-size: 30px;
+        line-height: 48px;
+    }
+}
+
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .main-third-page {
+        margin-top: -498px;
+    }
+
+    .main-third-page h1 {
+        font-size: 40px;
+        line-height: 58px;
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-block-start: 55px;
+        margin-block-end: 16px;
+    }
+}
+
+.main-team {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
     text-align: left;
-    color: #909090;
+    color: #414141;
+    background-color: #f0f2f1;
+    padding-left: 5px;
+    padding-bottom: 20px;
 }
 
-.main-team li {
+.team-article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.team-text {
+    width: 320px;
+}
+
+.main-team h2 {
+    font-size: 18px;
     font-weight: 700;
+    color: #64a0bc;
+    text-transform: uppercase;
+}
+
+.team-photo {
+    position: relative;
+    background-image: url("../img/layer-2322.jpg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    z-index: 30;
+    width: 370px;
+    height: 279px;
+    margin-bottom: -15%;
+}
+
+/* Планшетная версия */
+@media (min-width: 768px) {
+    .team-photo {
+        background-size: cover;
+        margin-bottom: 0;
+    }
+
+    .team-text {
+        width: 620px;
+    }
+}
+
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .breadcrumbs {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-team {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 70px;
+    }
+
+    .team-article {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .team-photo {
+        margin-right: 29px;
+        margin-top: 18px;
+    }
+
+    .team-text {
+        width: 790px;
+    }
 }
 
 /*Страница Клиенты*/
-
-.main-third-page {
-    background-color: #f0f2f1;
-}
-
-.main-third-page h1 {
-    font-size: 40px;
-    line-height: 58px;
-    font-weight: 400;
-    color: #414141;
-    text-transform: uppercase;
-    text-align: left;
-}
-
+/*
 .main-customers h2 {
     font-size: 18px;
     line-height: 24px;
@@ -1374,6 +1918,88 @@ p.first-paragraph {
 
 .main-customers li {
     font-weight: 700;
+}
+*/
+.main-customers {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: left;
+    color: #414141;
+    background-color: #f0f2f1;
+    padding-left: 5px;
+    padding-bottom: 20px;
+}
+
+.customers-article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.customers-text {
+    width: 320px;
+}
+
+.main-customers h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #64a0bc;
+    text-transform: uppercase;
+}
+
+.customers-photo {
+    position: relative;
+    background-image: url("../img/layer-2322.jpg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    z-index: 30;
+    width: 370px;
+    height: 279px;
+    margin-bottom: -15%;
+    margin-top: ;
+}
+
+/* Планшетная версия */
+@media (min-width: 768px) {
+    .customers-photo {
+        background-size: cover;
+        margin-bottom: 0;
+    }
+
+    .customers-text {
+        width: 620px;
+    }
+}
+
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .breadcrumbs {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-customers {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 70px;
+    }
+
+    .customers-article {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .customers-photo {
+        margin-right: 29px;
+        margin-top: 18px;
+    }
+
+    .customers-text {
+        width: 790px;
+    }
 }
 
 /*Страница второго уровня вложености (тип 1) */
@@ -1403,10 +2029,6 @@ p.first-paragraph {
 
 /*Страница Партнеры*/
 
-.main-partners-page {
-    background-color: #f0f2f1;
-}
-
 .main-partners-page h1 {
     font-size: 40px;
     line-height: 58px;
@@ -1416,7 +2038,7 @@ p.first-paragraph {
     text-align: left;
 }
 
-.main-partners > ul > li {
+.main-partners li {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -1424,6 +2046,30 @@ p.first-paragraph {
     color: #ffffff;
     font-size: 16px;
     line-height: 24px;
+    width: 300px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.main-partners ul li:nth-child(1) img {
+padding-top: 30px;
+}
+
+.main-partners ul li:nth-child(1) p {
+    padding-top: 46px;
+}
+
+.main-partners ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 0px;
+    margin-top: 45px;
 }
 
 .main-partners p {
@@ -1449,7 +2095,85 @@ p.first-paragraph {
     line-height: 24px;
     font-weight: 400;
     text-align: left;
-    color: #909090;
+    color: #414141;
+}
+
+.main-audit {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: left;
+    color: #414141;
+    background-color: #f0f2f1;
+    padding-left: 5px;
+    padding-bottom: 20px;
+}
+
+.audit-article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.audit-text {
+    width: 320px;
+}
+
+.audit-photo {
+    position: relative;
+    background-image: url("../img/audit-photo.jpg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    z-index: 30;
+    width: 370px;
+    height: 279px;
+    margin-bottom: -15%;
+}
+
+.main-audit .audit-article:nth-child(2) .audit-photo {
+    background-image: url("../img/audit-photo1.jpg");
+}
+
+/* Планшетная версия */
+@media (min-width: 768px) {
+    .audit-photo {
+        background-size: cover;
+        margin-bottom: 0;
+    }
+
+    .audit-text {
+        width: 620px;
+    }
+}
+
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .breadcrumbs {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-audit {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 70px;
+    }
+
+    .audit-article {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .audit-photo {
+        margin-right: 29px;
+        margin-top: 18px;
+    }
+
+    .audit-text {
+        width: 790px;
+    }
 }
 
 /*Страница Бухгалтерский учет*/
@@ -1468,7 +2192,81 @@ p.first-paragraph {
     line-height: 24px;
     font-weight: 400;
     text-align: left;
-    color: #909090;
+    color: #414141;
+}
+
+.main-accounting {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: left;
+    color: #414141;
+    background-color: #f0f2f1;
+    padding-left: 5px;
+    padding-bottom: 20px;
+}
+
+.accounting-article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.accounting-text {
+    width: 320px;
+}
+
+.accounting-photo {
+    position: relative;
+    background-image: url("../img/accounting-photo.jpg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    z-index: 30;
+    width: 370px;
+    height: 279px;
+    margin-bottom: -15%;
+}
+
+/* Планшетная версия */
+@media (min-width: 768px) {
+    .accounting-photo {
+        background-size: cover;
+        margin-bottom: 0;
+    }
+
+    .accounting-text {
+        width: 620px;
+    }
+}
+
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .breadcrumbs {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-accounting {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 70px;
+    }
+
+    .accounting-article {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .accounting-photo {
+        margin-right: 29px;
+        margin-top: 18px;
+    }
+
+    .accounting-text {
+        width: 790px;
+    }
 }
 
 /*Страница Управленческий консалтинг*/
@@ -1487,7 +2285,87 @@ p.first-paragraph {
     line-height: 24px;
     font-weight: 400;
     text-align: left;
-    color: #909090;
+    color: #414141;
+}
+
+.main-mconsulting {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: left;
+    color: #414141;
+    background-color: #f0f2f1;
+    padding-left: 5px;
+    padding-bottom: 20px;
+}
+
+.breadcrumbs-mconsulting {
+padding-left: 0;
+}
+
+.mconsulting-article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.mconsulting-text {
+    width: 320px;
+}
+
+.mconsulting-photo {
+    position: relative;
+    background-image: url("../img/mconsulting-photo.jpg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    z-index: 30;
+    width: 370px;
+    height: 279px;
+    margin-bottom: -15%;
+}
+
+/* Планшетная версия */
+@media (min-width: 768px) {
+    .mconsulting-photo {
+        background-size: cover;
+        margin-bottom: 0;
+    }
+    .breadcrumbs-mconsulting {
+        padding-left: 5px;
+    }
+    .mconsulting-text {
+        width: 620px;
+    }
+}
+
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .breadcrumbs {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-mconsulting {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 70px;
+    }
+
+    .mconsulting-article {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .mconsulting-photo {
+        margin-right: 29px;
+        margin-top: 18px;
+    }
+
+    .mconsulting-text {
+        width: 790px;
+    }
 }
 
 /*Страница Налоговый консалтинг*/
@@ -1506,7 +2384,81 @@ p.first-paragraph {
     line-height: 24px;
     font-weight: 400;
     text-align: left;
-    color: #909090;
+    color: #414141;
+}
+
+.main-taxconsulting {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: left;
+    color: #414141;
+    background-color: #f0f2f1;
+    padding-left: 5px;
+    padding-bottom: 20px;
+}
+
+.taxconsulting-article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.taxconsulting-text {
+    width: 320px;
+}
+
+.taxconsulting-photo {
+    position: relative;
+    background-image: url("../img/taxconsulting-photo.jpg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    z-index: 30;
+    width: 370px;
+    height: 279px;
+    margin-bottom: -15%;
+}
+
+/* Планшетная версия */
+@media (min-width: 768px) {
+    .taxconsulting-photo {
+        background-size: cover;
+        margin-bottom: 0;
+    }
+
+    .taxconsulting-text {
+        width: 620px;
+    }
+}
+
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .breadcrumbs {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-taxconsulting {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 70px;
+    }
+
+    .taxconsulting-article {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .taxconsulting-photo {
+        margin-right: 29px;
+        margin-top: 18px;
+    }
+
+    .taxconsulting-text {
+        width: 790px;
+    }
 }
 
 /*Страница Финансово-экономический анализ*/
@@ -1525,7 +2477,81 @@ p.first-paragraph {
     line-height: 24px;
     font-weight: 400;
     text-align: left;
-    color: #909090;
+    color: #414141;
+}
+
+.main-fea {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: left;
+    color: #414141;
+    background-color: #f0f2f1;
+    padding-left: 5px;
+    padding-bottom: 20px;
+}
+
+.fea-article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.fea-text {
+    width: 320px;
+}
+
+.fea-photo {
+    position: relative;
+    background-image: url("../img/fea-photo.jpg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    z-index: 30;
+    width: 370px;
+    height: 279px;
+    margin-bottom: -15%;
+}
+
+/* Планшетная версия */
+@media (min-width: 768px) {
+    .fea-photo {
+        background-size: cover;
+        margin-bottom: 0;
+    }
+
+    .fea-text {
+        width: 620px;
+    }
+}
+
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .breadcrumbs {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-fea {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 70px;
+    }
+
+    .fea-article {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .fea-photo {
+        margin-right: 29px;
+        margin-top: 18px;
+    }
+
+    .fea-text {
+        width: 790px;
+    }
 }
 
 /*Страница Бизнес-консультирование*/
@@ -1544,10 +2570,84 @@ p.first-paragraph {
     line-height: 24px;
     font-weight: 400;
     text-align: left;
-    color: #909090;
+    color: #414141;
 }
 
-/*Страница Бизнес-консультирование*/
+.main-bconsulting {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: left;
+    color: #414141;
+    background-color: #f0f2f1;
+    padding-left: 5px;
+    padding-bottom: 20px;
+}
+
+.bconsulting-article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.bconsulting-text {
+    width: 320px;
+}
+
+.bconsulting-photo {
+    position: relative;
+    background-image: url("../img/bconsulting-photo.jpg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    z-index: 30;
+    width: 370px;
+    height: 279px;
+    margin-bottom: -15%;
+}
+
+/* Планшетная версия */
+@media (min-width: 768px) {
+    .bconsulting-photo {
+        background-size: cover;
+        margin-bottom: 0;
+    }
+
+    .bconsulting-text {
+        width: 620px;
+    }
+}
+
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .breadcrumbs {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-bconsulting {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 70px;
+    }
+
+    .bconsulting-article {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .bconsulting-photo {
+        margin-right: 29px;
+        margin-top: 18px;
+    }
+
+    .bconsulting-text {
+        width: 790px;
+    }
+}
+
+/*Страница КОНСУЛЬТАЦИОННОЕ АБОНЕНТСКОЕ ОБСЛУЖИВАНИЕ*/
 
 .main-cas h2 {
     font-size: 18px;
@@ -1563,7 +2663,81 @@ p.first-paragraph {
     line-height: 24px;
     font-weight: 400;
     text-align: left;
-    color: #909090;
+    color: #414141;
+}
+
+.main-cas {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: left;
+    color: #414141;
+    background-color: #f0f2f1;
+    padding-left: 5px;
+    padding-bottom: 20px;
+}
+
+.cas-article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.cas-text {
+    width: 320px;
+}
+
+.cas-photo {
+    position: relative;
+    background-image: url("../img/cas-photo.jpg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    z-index: 30;
+    width: 370px;
+    height: 279px;
+    margin-bottom: -15%;
+}
+
+/* Планшетная версия */
+@media (min-width: 768px) {
+    .cas-photo {
+        background-size: cover;
+        margin-bottom: 0;
+    }
+
+    .cas-text {
+        width: 620px;
+    }
+}
+
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .breadcrumbs {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-cas {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 70px;
+    }
+
+    .cas-article {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .cas-photo {
+        margin-right: 29px;
+        margin-top: 18px;
+    }
+
+    .cas-text {
+        width: 790px;
+    }
 }
 
 /*Страница Моделирование бизнес-процессов*/
@@ -1574,7 +2748,7 @@ p.first-paragraph {
     font-weight: 700;
     text-align: left;
     color: #64a0bc;
-    text-transform: uppercase;
+    text-transform: upperbpme;
 }
 
 .main-bpm p, .main-bpm li {
@@ -1582,7 +2756,81 @@ p.first-paragraph {
     line-height: 24px;
     font-weight: 400;
     text-align: left;
-    color: #909090;
+    color: #414141;
+}
+
+.main-bpm {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: left;
+    color: #414141;
+    background-color: #f0f2f1;
+    padding-left: 5px;
+    padding-bottom: 20px;
+}
+
+.bpm-article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.bpm-text {
+    width: 320px;
+}
+
+.bpm-photo {
+    position: relative;
+    background-image: url("../img/bpm-photo.jpg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    z-index: 30;
+    width: 370px;
+    height: 279px;
+    margin-bottom: -15%;
+}
+
+/* Планшетная версия */
+@media (min-width: 768px) {
+    .bpm-photo {
+        background-size: cover;
+        margin-bottom: 0;
+    }
+
+    .bpm-text {
+        width: 620px;
+    }
+}
+
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .breadcrumbs {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-bpm {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 70px;
+    }
+
+    .bpm-article {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .bpm-photo {
+        margin-right: 29px;
+        margin-top: 18px;
+    }
+
+    .bpm-text {
+        width: 790px;
+    }
 }
 
 /*Страница Новости*/
