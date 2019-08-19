@@ -10,45 +10,54 @@
 </head>
 
 <body>
-    <header class="company-header">
+<div class="container">
+    <button type="button" class="arrow-up"></button>
+    <header class="main-header">
         <ul class="header-contacts">
             <li class="header-adress">111024, г. Москва, ул. Авиамоторная, д. 55, корп. 31.</li>
             <li class="header-email"><a href="mailto:auditexpbiz@yandex.ru">auditexpbiz@yandex.ru</a></li>
             <li class="header-phone">+7(495) 544-41-72</li>
             <li class="header-fax">+7(495) 544-41-73</li>
         </ul>
-        <a href="index.html" title="Перейти на главную страницу" class="logo"><img src="img/logo-audit.png" width="209"
-                alt="логотип Аудит-Эксперт Бизнес"></a>
-        <nav class="main-menu">
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li>
-                    <a href="company.html">О компании</a>
-                    <ul class="sub-menu">
-                        <li><a href="team.html">Наша команда</a></li>
-                        <li><a href="licence.html">Лицензии и свидетельства</a></li>
-                        <li><a href="customers.html">Клиенты</a></li>
-                        <li><a href="partners.html">Партнеры</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="services.html">Услуги</a>
-                    <ul class="sub-menu">
-                        <li><a href="audit.html">Общий аудит</a></li>
-                        <li><a href="accounting.html">Бухгалтерский учет</a></li>
-                        <li><a href="mconsulting.html">Управленческий консалтинг</a></li>
-                        <li><a href="taxconsulting.html">Налоговый консалтинг</a></li>
-                        <li><a href="fea.html">Финансово-экономический анализ</a></li>
-                        <li><a href="bconsulting.html">Бизнес-консультирование</a></li>
-                        <li><a href="cas.html">Консультационное абонентское обслуживание</a></li>
-                        <li><a href="bpm.html">Моделирование бизнес-процессов</a></li>
-                    </ul>
-                </li>
-                <li><a href="news.html">Новости</a></li>
-                <li><a href="vacancies.html">Вакансии</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <a href="index.html" title="Перейти на главную страницу" class="logo"><img src="img/logo-audit.png"
+                                                                                       width="209"
+                                                                                       alt="логотип Аудит-Эксперт Бизнес"></a>
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li class="parent-item">
+                        <a href="company.html">О компании</a>
+                        <ul class="sub-menu">
+                            <li><a href="team.html">Наша команда</a></li>
+                            <li><a href="licence.html">Лицензии и свидетельства</a></li>
+                            <li><a href="customers.html">Клиенты</a></li>
+                            <li><a href="partners.html">Партнеры</a></li>
+                        </ul>
+                    </li>
+                    <li class="parent-item">
+                        <a href="services.html">Услуги</a>
+                        <ul class="sub-menu">
+                            <li><a href="audit.html">Общий аудит</a></li>
+                            <li><a href="accounting.html">Бухгалтерский учет</a></li>
+                            <li><a href="mconsulting.html">Управленческий консалтинг</a></li>
+                            <li><a href="taxconsulting.html">Налоговый консалтинг</a></li>
+                            <li><a href="fea.html">Финансово-экономический анализ</a></li>
+                            <li><a href="bconsulting.html">Бизнес-консультирование</a></li>
+                            <li><a href="cas.html">Консультационное абонентское обслуживание</a></li>
+                            <li><a href="bpm.html">Моделирование бизнес-процессов</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="vacancies.html">Вакансии</a></li>
+                    <li class="current-item"><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        <section class="second-slider">
+            <div class="second-slide-first">
+            </div>
+        </section>
     </header>
     <main class="main-third-page">
         <h1>Контакты</h1>
@@ -57,6 +66,9 @@
             <li class="breadcrumbs-current">/ Контакты</li>
         </ul>
         <section class="main-contacts">
+            <div class="contacts-article">
+                <div class="contacts-photo"></div>
+                <div class="contacts-text">
             <h2>Наш адрес:</h2>
             <p><b>111024, г. Москва, ул. Авиамоторная,   д. 55, корп. 31.</b></p>
             <p>Тел. <b>(495) 544-41-72</b></p>
@@ -66,8 +78,12 @@
             <p>Ближайшая к офису компании станция <b>метро «Авиамоторная»</b>. Далее служебным маршрутным такси Российского нового университета (РосНОУ). <b>Ул. Авиамоторная,   д. 55, корп. 31</b> (офисный центр).</p>
             <p>Время проезда порядка 6-7 минут.</p>
             <div class="map"></div>
+                </div>
+            </div>
         </section>
-
+        <div class="map-container">
+            <iframe src="https://yandex.ru/map-widget/v1/-/CGvveGJh" width="320" height="400" frameborder="0" allowfullscreen="true"></iframe>
+        </div>
     </main>
     <footer class="footer">
     <div class="footer-logo">
@@ -101,5 +117,5 @@
     </div>
 </footer>
     <div class="move-up"></div>
-
+</div>
 </body>
