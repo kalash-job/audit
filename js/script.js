@@ -87,14 +87,14 @@ var slides = document.querySelectorAll(".main-slide");
 for (var i = 0; i < nextSlide.length; i++) {
     nextSlide[i].addEventListener('click', function () {
         /*подключаем анимацию для всех слайдов после первого клика по стрелочке*/
-        for(var j=0; j<nextSlide.length; j++) {
+        for (var j = 0; j < nextSlide.length; j++) {
             slides[j].classList.add('main-slide-animation');
         }
         plusSlide();
     });
     previousSlide[i].addEventListener('click', function () {
         /*подключаем анимацию для всех слайдов после первого клика по стрелочке*/
-        for(var j=0; j<nextSlide.length; j++) {
+        for (var j = 0; j < nextSlide.length; j++) {
             slides[j].classList.add('main-slide-animation');
         }
         minusSlide();
@@ -135,8 +135,8 @@ function showService(n, direction) {
                 countDisplayBlock += 1;
             }
             /*для варианта в мобильной версии, если ни у одного элемента нет display = "block"*/
-            if(countDisplayBlock === 0 && i === services.length - 1) {
-                services[changingDisplayBlock+1].style.display = "block";
+            if (countDisplayBlock === 0 && i === services.length - 1) {
+                services[changingDisplayBlock + 1].style.display = "block";
             }
         }
     } else {

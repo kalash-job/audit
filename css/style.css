@@ -433,8 +433,8 @@ li.current-item {
         position: absolute; /* Абсолютное позиционирование */
         left: 272px;
         top: 22px; /* Положение треугольника */
-        border: 7px solid transparent; /* Прозрачные границы */
-        border-top: 7px solid #ffffff; /* Добавляем треугольник */
+        border: 14px solid transparent; /* Прозрачные границы */
+        border-top: 14px solid #ffffff; /* Добавляем треугольник */
         padding: 0;
         background-color: transparent;
         cursor: pointer;
