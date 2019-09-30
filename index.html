@@ -12,7 +12,7 @@
 <body>
 <div class="container">
     <div class="finger-layer"></div>
-    <button type="button" class="arrow-up"></button>
+    <button type="button" class="moveUp"></button>
     <header class="main-header">
         <ul class="header-contacts">
             <li class="header-adress">111024, г. Москва, ул. Авиамоторная, д. 55, корп. 31.</li>
@@ -24,11 +24,13 @@
             <a href="index.html" title="Перейти на главную страницу" class="logo"><img src="img/logo-audit.png"
                                                                                        width="209"
                                                                                        alt="логотип Аудит-Эксперт Бизнес"></a>
+            <button type="button" class="hamburger-button"><span>Меню</span></button>
             <nav class="main-menu">
                 <ul>
                     <li class="current-item"><a href="index.html">Главная</a></li>
                     <li class="parent-item">
                         <a href="company.html">О компании</a>
+                        <button type="button" class="opening-submenu"></button>
                         <ul class="sub-menu">
                             <li><a href="team.html">Наша команда</a></li>
                             <li><a href="licence.html">Лицензии и свидетельства</a></li>
@@ -38,6 +40,7 @@
                     </li>
                     <li class="parent-item">
                         <a href="services.html">Услуги</a>
+                        <button type="button" class="opening-submenu"></button>
                         <ul class="sub-menu">
                             <li><a href="audit.html">Общий аудит</a></li>
                             <li><a href="accounting.html">Бухгалтерский учет</a></li>
@@ -56,24 +59,29 @@
             </nav>
         </div>
         <section class="main-slider">
-            <div class="main-slide-first">
+            <div class="main-slide main-slide-first">
                 <div class="feachers-1">
                     <button type="button" class="left-slider-button"></button>
                     <b>Профессионализм и ответственность</b>
                     <button type="button" class="right-slider-button"></button>
                 </div>
             </div>
-            <div class="main-slide-second">
-                <button type="button" class="left-slider-button"></button>
-                <b class="feachers-2">Строгое соблюдение сроков</b>
-                <button type="button" class="right-slider-button"></button>
+            <div class="main-slide main-slide-second">
+                <div class="feachers-2">
+                    <button type="button" class="left-slider-button"></button>
+                    <b>Строгое соблюдение сроков</b>
+                    <button type="button" class="right-slider-button"></button>
+                </div>
             </div>
-            <div class="main-slide-third">
-                <button type="button" class="left-slider-button"></button>
-                <b class="feachers-3">Чёткость и объективность</b>
-                <button type="button" class="right-slider-button"></button>
+            <div class="main-slide main-slide-third">
+                <div class="feachers-3">
+                    <button type="button" class="left-slider-button"></button>
+                    <b>Чёткость и объективность</b>
+                    <button type="button" class="right-slider-button"></button>
+                </div>
             </div>
         </section>
+
     </header>
 
     <main class="main-container">
@@ -169,7 +177,7 @@
                     </ul>
                 </li>
                 <li>
-                    <div class="key-fea></div>
+                    <div class="key-fea"></div>
                     <a href="fea.html">
                         <h3>Финансово-экономический анализ</h3>
                     </a>
@@ -180,7 +188,7 @@
                     </ul>
                 </li>
                 <li>
-                    <div class="key-bconsulting></div>
+                    <div class="key-bconsulting"></div>
                     <a href="bconsulting.html">
                         <h3>Бизнес-консультирование</h3>
                     </a>
@@ -191,7 +199,7 @@
                     </ul>
                 </li>
                 <li>
-                    <div class="key-cas></div>
+                    <div class="key-cas"></div>
                     <a href="cas.html">
                         <h3>Консультационное абонентское обслуживание по учету, налогам и праву</h3>
                     </a>
@@ -203,7 +211,7 @@
                     </ul>
                 </li>
                 <li>
-                    <div class="key-bpm></div>
+                    <div class="key-bpm"></div>
                     <a href="bpm.html">
                         <h3>Моделирование бизнес-процессов</h3>
                     </a>
@@ -243,9 +251,9 @@
         </section>
         <section class="have-questions">
             <div class="questions-block">
-            <p class="questions">У Вас есть вопросы? <br>Наши сотрудники с радостью на них ответят!</p>
-            <p><a href="tel:74955444172">+7(495)544-41-72</a></p>
-            <p class="questions-opening-hours">С понедельника по пятницу <br>с 10:00 до 17:00.</p>
+                <p class="questions">У Вас есть вопросы? <br>Наши сотрудники с радостью на них ответят!</p>
+                <p><a href="tel:74955444172">+7(495)544-41-72</a></p>
+                <p class="questions-opening-hours">С понедельника по пятницу <br>с 10:00 до 17:00.</p>
             </div>
         </section>
     </main>
@@ -280,8 +288,9 @@
             <a href="mailto:auditexpbiz@yandex.ru"></a>
         </div>
     </footer>
-    <div class="move-up"></div>
+
 </div>
+<script src="js/script.js"></script>
 </body>
 
 </html>

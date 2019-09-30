@@ -11,7 +11,7 @@
 
 <body>
 <div class="container">
-    <button type="button" class="arrow-up"></button>
+    <button type="button" class="moveUp"></button>
     <header class="main-header">
         <ul class="header-contacts">
             <li class="header-adress">111024, г. Москва, ул. Авиамоторная, д. 55, корп. 31.</li>
@@ -23,11 +23,13 @@
             <a href="index.html" title="Перейти на главную страницу" class="logo"><img src="img/logo-audit.png"
                                                                                        width="209"
                                                                                        alt="логотип Аудит-Эксперт Бизнес"></a>
+            <button type="button" class="hamburger-button"><span>Меню</span></button>
             <nav class="main-menu">
                 <ul>
                     <li><a href="index.html">Главная</a></li>
                     <li class="parent-item current-item">
                         <a href="company.html">О компании</a>
+                        <button type="button" class="opening-submenu"></button>
                         <ul class="sub-menu">
                             <li><a href="team.html">Наша команда</a></li>
                             <li><a href="licence.html">Лицензии и свидетельства</a></li>
@@ -37,6 +39,7 @@
                     </li>
                     <li class="parent-item">
                         <a href="services.html">Услуги</a>
+                        <button type="button" class="opening-submenu"></button>
                         <ul class="sub-menu">
                             <li><a href="audit.html">Общий аудит</a></li>
                             <li><a href="accounting.html">Бухгалтерский учет</a></li>
@@ -157,56 +160,50 @@
             <div class="comments-of-clients">
                 <h2>Как клиенты оценивают нашу работу:</h2>
                 <div>
-                    <p>Nullam laoreet velit eget ex dapibus vestibulum. Integer et interdum erat, in condimentum nisl.
-                        Nulla
-                        facilisi. Donec efficitur justo eu est convallis, id gravida leo eleifend. Mauris non tempus
-                        quam, quis.
-                        </p>
-                    <b>John McCoist, USA</b>
+                    <p>Можно разместить отзыв конкретного клиента, партнера, ассоциации, проверяющей организации об уровне работы компании Аудит-Эксперт Бизнес.
+                    </p>
+                    <b>Компания, должность, ФИО</b>
                 </div>
                 <div>
-                    <p>Vestibulum facilisis varius lorem, quis interdum massa venenatis non. Etiam quis
-                        ante
-                        id augue consequat placerat. Integer semper volutpat eros, a ornare diam interdum et. Quisque
-                        consectetur, eros eu porttitor consectetur, nibh diam placerat magna, vel pharetra nulla nisi ac
-                        metus. Nulla sed quam magna. assumenda</p>
-                    <b>Bradley Grosh, USA</b>
+                    <p>Можно разместить отзыв конкретного клиента, партнера, ассоциации, проверяющей организации об уровне работы компании Аудит-Эксперт Бизнес.</p>
+                    <b>Компания, должность, ФИО</b>
                 </div>
             </div>
             <div class="comments-layer"></div>
         </section>
     </main>
     <footer class="footer">
-    <div class="footer-logo">
-        <a href="index.html" title="Перейти на главную страницу" class="logo"><img src="img/logo-audit-gray.png"
-                                                                                   width="209"
-                                                                                   alt="логотип Аудит-Эксперт Бизнес"></a>
-        <p>Независимо от того, с кем из наших сотрудников Вы работаете, независимо от того, организацию какого
-            размера Вы представляете, Вы можете быть уверены в том, что мы предложим Вам лучшие решения стоящих
-            перед Вами задач.</p>
-        <p>© ООО "Аудит-Эксперт Бизнес", 2006-2019</p>
-    </div>
-    <div class="footer-nav">
-        <h3>Навигация</h3>
-        <ul class="footer-navigation">
-            <li><a href="company.html">О компании</a></li>
-            <li><a href="services.html">Услуги</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="vacancies.html">Вакансии</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </div>
-    <div class="footer-contacts">
-        <h3>Контактная информация</h3>
-        <p>111024, г. Москва, ул. Авиамоторная, д. 55, корп. 31.</p>
-        <a href="mailto:auditexpbiz@yandex.ru">auditexpbiz@yandex.ru</a>
-    </div>
-    <div class="work-schedule">
-        <h3>График работы</h3>
-        <p>Пнд-Птн: 10:00 - 17:00.</p>
-        <a href="mailto:auditexpbiz@yandex.ru"></a>
-    </div>
-</footer>
-    <div class="move-up"></div>
+        <div class="footer-logo">
+            <a href="index.html" title="Перейти на главную страницу" class="logo"><img src="img/logo-audit-gray.png"
+                                                                                       width="209"
+                                                                                       alt="логотип Аудит-Эксперт Бизнес"></a>
+            <p>Независимо от того, с кем из наших сотрудников Вы работаете, независимо от того, организацию какого
+                размера Вы представляете, Вы можете быть уверены в том, что мы предложим Вам лучшие решения стоящих
+                перед Вами задач.</p>
+            <p>© ООО "Аудит-Эксперт Бизнес", 2006-2019</p>
+        </div>
+        <div class="footer-nav">
+            <h3>Навигация</h3>
+            <ul class="footer-navigation">
+                <li><a href="company.html">О компании</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="vacancies.html">Вакансии</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="footer-contacts">
+            <h3>Контактная информация</h3>
+            <p>111024, г. Москва, ул. Авиамоторная, д. 55, корп. 31.</p>
+            <a href="mailto:auditexpbiz@yandex.ru">auditexpbiz@yandex.ru</a>
+        </div>
+        <div class="work-schedule">
+            <h3>График работы</h3>
+            <p>Пнд-Птн: 10:00 - 17:00.</p>
+            <a href="mailto:auditexpbiz@yandex.ru"></a>
+        </div>
+    </footer>
+
 </div>
+<script src="js/script.js"></script>
 </body>

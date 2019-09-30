@@ -11,7 +11,7 @@
 
 <body>
 <div class="container">
-    <button type="button" class="arrow-up"></button>
+    <button type="button" class="moveUp"></button>
     <header class="main-header">
         <ul class="header-contacts">
             <li class="header-adress">111024, г. Москва, ул. Авиамоторная, д. 55, корп. 31.</li>
@@ -23,11 +23,13 @@
             <a href="index.html" title="Перейти на главную страницу" class="logo"><img src="img/logo-audit.png"
                                                                                        width="209"
                                                                                        alt="логотип Аудит-Эксперт Бизнес"></a>
+            <button type="button" class="hamburger-button"><span>Меню</span></button>
             <nav class="main-menu">
                 <ul>
                     <li><a href="index.html">Главная</a></li>
                     <li class="parent-item current-item">
                         <a href="company.html">О компании</a>
+                        <button type="button" class="opening-submenu"></button>
                         <ul class="sub-menu">
                             <li><a href="team.html">Наша команда</a></li>
                             <li><a href="licence.html">Лицензии и свидетельства</a></li>
@@ -37,6 +39,7 @@
                     </li>
                     <li class="parent-item">
                         <a href="services.html">Услуги</a>
+                        <button type="button" class="opening-submenu"></button>
                         <ul class="sub-menu">
                             <li><a href="audit.html">Общий аудит</a></li>
                             <li><a href="accounting.html">Бухгалтерский учет</a></li>
@@ -116,6 +119,7 @@
             <a href="mailto:auditexpbiz@yandex.ru"></a>
         </div>
     </footer>
-    <div class="move-up"></div>
+
 </div>
+<script src="js/script.js"></script>
 </body>
