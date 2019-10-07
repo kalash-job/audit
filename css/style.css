@@ -1707,8 +1707,6 @@ p.first-paragraph {
     line-height: 24px;
     text-align: left;
     text-shadow: 0.5px 0.9px 0 rgba(0, 0, 0, 0.06);
-
-
     background-color: rgba(58, 116, 143, 0.5);
     width: 100%;
     height: 100%;
@@ -1736,6 +1734,27 @@ p.first-paragraph {
     align-items: start;
     padding-top: 45px;
     padding-bottom: 82px;
+
+    flex-direction: column;
+}
+
+.comments-of-clients ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    justify-content: space-between;
+    align-items: start;
+    padding-top: 45px;
+    padding-bottom: 82px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.comments-of-clients li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .comments h2 {
@@ -1754,14 +1773,14 @@ p.first-paragraph {
 
 /* Десктопная версия 1*/
 @media (min-width: 1200px) {
-    .comments-of-clients {
+    .comments-of-clients,
+    .comments-of-clients ul {
         width: 1174px;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .comments-of-clients div,
-    .comments-of-clients h2 {
+    .comments-of-clients li {
         width: 340px;
     }
 }
@@ -2256,6 +2275,164 @@ p.first-paragraph {
         width: 370px;
     }
 }
+
+/*Страница Отзывы*/
+
+.main-feedbacks {
+    background-color: #f0f2f1;
+}
+
+.main-feedbacks > ul > li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #4483a4;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    width: 310px;
+    margin-bottom: 30px;
+}
+
+.main-feedbacks > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 0;
+    margin-top: 45px;
+}
+
+
+.main-feedbacks p {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: left;
+    padding-right: 10px;
+    margin-left: 20px;
+}
+
+.feedbacks-photo {
+    position: relative;
+    background-image: url("../img/feedbacks-photo.jpg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    z-index: 30;
+    width: 370px;
+    height: 279px;
+    margin-bottom: -15%;
+}
+
+.main-feedbacks img {
+    width: 310px;
+    cursor: pointer;
+}
+
+.modal-feedbacks {
+    display: none;
+}
+
+
+
+/* Планшетная версия */
+@media (min-width: 768px) {
+    .feedbacks-photo {
+        background-size: cover;
+        margin-bottom: 0;
+    }
+    /* Всплывающее окно с увеличенной картинкой */
+    .modal-img {
+        position: fixed;
+        color: #000000;
+        background-color: #4483a4;
+        box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+        top: 20px;
+        left: 50%;
+        display: none;
+        width: 580px;
+        margin-left: -320px;
+        padding: 30px 30px;
+        z-index: 100;
+    }
+    .modal-close {
+        position: absolute;
+        top: 0;
+        right: -34px;
+
+        width: 22px;
+        height: 22px;
+
+        font-size: 0;
+
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .modal-close::before,
+    .modal-close::after {
+        content: "";
+
+        position: absolute;
+        top: 10px;
+        left: 2px;
+
+        width: 19px;
+        height: 3px;
+
+        background-color: #4483a4;
+    }
+
+    .modal-close::before {
+        transform: rotate(45deg);
+    }
+
+    .modal-close::after {
+        transform: rotate(-45deg);
+    }
+
+    .overlay {
+        position: fixed;
+        display: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(12, 108, 108, 0.3);
+        z-index: 1;
+    }
+
+}
+
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .feedbacks-photo {
+        margin-right: 29px;
+        margin-top: 18px;
+    }
+
+    .main-feedbacks {
+        width: 1174px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .main-feedbacks > ul > li {
+        width: 370px;
+    }
+
+    .main-feedbacks li div {
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 30px;
+    }
+
+    .main-feedbacks img {
+        width: 370px;
+    }
+}
+
 
 /*Страница Партнеры*/
 
