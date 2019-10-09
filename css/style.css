@@ -1755,6 +1755,11 @@ p.first-paragraph {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: block;
+}
+
+.comments-of-clients li:nth-child(n+2) {
+    display: none;
 }
 
 .comments h2 {
@@ -1771,6 +1776,17 @@ p.first-paragraph {
     text-shadow: none;
 }
 
+/* Планшетная версия */
+@media (min-width: 768px) {
+    .comments-of-clients li {
+        width: 300px;
+    }
+    .comments-of-clients li:nth-child(2) {
+        display: block;
+    }
+}
+
+
 /* Десктопная версия 1*/
 @media (min-width: 1200px) {
     .comments-of-clients,
@@ -1782,6 +1798,9 @@ p.first-paragraph {
 
     .comments-of-clients li {
         width: 340px;
+    }
+    .comments-of-clients li:nth-child(3) {
+        display: block;
     }
 }
 
@@ -1909,10 +1928,6 @@ p.first-paragraph {
     margin-bottom: 33px;
 }
 
-/* Планшетная версия */
-@media (min-width: 768px) {
-
-}
 
 /* Десктопная версия 1*/
 @media (min-width: 1200px) {

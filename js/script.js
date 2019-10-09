@@ -45,9 +45,8 @@ for (var i = 0; i < subMenu.length; i++) {
 }
 
 
-
 var title = document.querySelector('title');
-if(title.text === 'Сайт аудиторской компании ООО "Аудит-Эксперт Бизнес"') {
+if (title.text === 'Сайт аудиторской компании ООО "Аудит-Эксперт Бизнес"') {
 
     /* Главный слайдер */
 
@@ -203,12 +202,12 @@ if(title.text === 'Сайт аудиторской компании ООО "Ау
 
 
 /*Открытие и закрытие увеличенных изображений отзывов и лицензий*/
-if(title.text === 'Страница "Отзывы" сайта ООО "Аудит-Эксперт Бизнес"') {
+if (title.text === 'Страница "Отзывы" сайта ООО "Аудит-Эксперт Бизнес"') {
     var closePopup = document.querySelector('.modal-close');
     var popup = document.querySelector('.modal-img');
     var overlay = document.querySelector('.overlay');
     var showPopup = document.querySelectorAll('.feedbacks-img');
-   /* функция для открытия модального окна, оверлея и определения src большой картинки */
+    /* функция для открытия модального окна, оверлея и определения src большой картинки */
     var toShowPopup = function (i) {
         popup.style.display = "block";
         overlay.style.display = "block";
@@ -216,12 +215,12 @@ if(title.text === 'Страница "Отзывы" сайта ООО "Аудит
         imgLarge.src = 'img/licence/feedback' + i + 'large.jpg';
     }
     /* функция для отлова нажатия на иконки картинок с определением, на какую конкретно нажали*/
-    var addImgClickHandler  = function (showPopupImg, i) {
+    var addImgClickHandler = function (showPopupImg, i) {
         showPopupImg.addEventListener('click', function () {
-            toShowPopup(i+1);
+            toShowPopup(i + 1);
         });
     }
-/*перебираем все иконки и с помощью вызова функции addImgClickHandler для каждой иконки проверяем был ли клик по иконке*/
+    /*перебираем все иконки и с помощью вызова функции addImgClickHandler для каждой иконки проверяем был ли клик по иконке*/
     for (var i = 0; i < showPopup.length; i++) {
         addImgClickHandler(showPopup[i], i);
     }
@@ -234,7 +233,7 @@ if(title.text === 'Страница "Отзывы" сайта ООО "Аудит
     });
     /*клавишей ESC*/
     window.addEventListener('keydown', function (evt) {
-        if(evt.key === 'Escape') {
+        if (evt.key === 'Escape') {
             popup.style.display = "none";
             overlay.style.display = "none";
         }
@@ -244,4 +243,105 @@ if(title.text === 'Страница "Отзывы" сайта ООО "Аудит
         popup.style.display = "none";
         overlay.style.display = "none";
     });
+}
+
+
+if (title.text === 'Страница "О компании ООО "Аудит-Эксперт Бизнес"') {
+    /* Слайдер КАК КЛИЕНТЫ ОЦЕНИВАЮТ НАШУ РАБОТУ*/
+    var nextFeedback = document.querySelector('.arrow-right');
+    var previousFeedback = document.querySelector('.arrow-left');
+
+    /* Основная функция слайдера */
+    function showFeedback(n, direction) {
+        var i;
+        var feedbacks = document.querySelectorAll(".comments-of-clients li");
+        if (direction === 'right') {
+            var countLeft = 0;
+            var countRight = 0;
+            var countDisplayBlock = 0;
+            var changingDisplayBlock = 0;
+            for (i = 0; i < feedbacks.length; i++) {
+                console.log(getComputedStyle(feedbacks[i]).display);
+
+                if (getComputedStyle(feedbacks[i]).display === 'block' && countLeft === 0) {
+                    countLeft += 1;
+                    console.log('зашли в 1-й if', 'i=' + i, 'countLeft=' + countLeft);
+                    feedbacks[i].style.display = 'none';
+                    changingDisplayBlock = i;
+                }
+                console.log(getComputedStyle(feedbacks[i]).display);
+                if (i > 0 && getComputedStyle(feedbacks[i]).display === 'none' && getComputedStyle(feedbacks[i - 1]).display === 'block' && countRight === 0) {
+                    countRight += 1;
+                    console.log('зашли в 2-й if', 'i=' + i, 'countRight=' + countRight);
+                    feedbacks[i].style.display = "block";
+                }
+                /*счетчик элементов с display = "block"*/
+                if (getComputedStyle(feedbacks[i]).display === 'block') {
+                    countDisplayBlock += 1;
+                }
+                /*для варианта в мобильной версии, если ни у одного элемента нет display = "block"*/
+                if (countDisplayBlock === 0 && i === feedbacks.length - 1) {
+                    feedbacks[changingDisplayBlock + 1].style.display = "block";
+                }
+            }
+        } else {
+            if (direction === 'left') {
+                var countLeft = 0;
+                var countRight = 0;
+                for (i = 1; i < feedbacks.length; i++) {
+                    if (getComputedStyle(feedbacks[i - 1]).display === "none" && getComputedStyle(feedbacks[i]).display === "block" && countLeft === 0) {
+                        countLeft += 1;
+                        console.log('зашли в 3-й if');
+                        feedbacks[i - 1].style.display = "block";
+                    }
+                    if (i > 0 && getComputedStyle(feedbacks[i]).display === "none" && getComputedStyle(feedbacks[i - 1]).display === "block" && countRight === 0) {
+                        countRight += 1;
+                        console.log('зашли в 4-й if');
+                        feedbacks[i - 1].style.display = "none";
+                    } else if (i === feedbacks.length - 1 && getComputedStyle(feedbacks[i]).display === "block" && getComputedStyle(feedbacks[i - 1]).display === "block" && countRight === 0) {
+                        feedbacks[i].style.display = "none";
+                    }
+                }
+            }
+        }
+        /*отключение стрелок в крайних положениях*/
+        if (getComputedStyle(feedbacks[0]).display === "block") {
+            console.log('зашли в отключение стрелок в крайних положениях 1-й if');
+            previousFeedback.style.display = "none";
+        } else if (getComputedStyle(feedbacks[0]).display === "none") {
+            console.log('зашли в отключение стрелок в крайних положениях 1-й else');
+            previousFeedback.style.display = "block";
+        }
+        if (getComputedStyle(feedbacks[feedbacks.length - 1]).display === "block") {
+            console.log('зашли в отключение стрелок в крайних положениях 2-й if');
+            nextFeedback.style.display = "none";
+        } else if (getComputedStyle(feedbacks[feedbacks.length - 1]).display === "none") {
+            console.log('зашли в отключение стрелок в крайних положениях 2-й else');
+            nextFeedback.style.display = "block";
+        }
+    }
+
+    /* Индекс первого слайда по умолчанию */
+    var feedbackIndex = 1;
+    showFeedback(feedbackIndex);
+
+    /* Функция увеличивает индекс на 1, показывает первым следующий слайд*/
+    function plusFeedback() {
+        showFeedback(feedbackIndex += 1, 'right');
+    }
+
+    /* Функция уменьшяет индекс на 1, показывает первым предыдущий слайд*/
+    function minusFeedback() {
+        showFeedback(feedbackIndex -= 1, 'left');
+    }
+
+    /*Обрабатываем клики по кнопкам управления слайдами*/
+    nextFeedback.addEventListener('click', function () {
+        plusFeedback();
+    });
+    previousFeedback.addEventListener('click', function () {
+        minusFeedback();
+    });
+
+
 }
