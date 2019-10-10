@@ -3541,6 +3541,7 @@ p.first-paragraph {
 
 iframe {
     margin-bottom: -6px;
+    border: 0;
 }
 
 /* Планшетная версия */
