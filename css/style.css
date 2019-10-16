@@ -554,7 +554,7 @@ li.current-item {
 
     .sub-menu {
         position: absolute;
-        top: 158px;
+        top: 134px;
         width: auto;
         display: none;
         background-color: #373d43;
@@ -664,6 +664,7 @@ li.current-item {
 
 .main-slider {
     position: absolute;
+    top: 0;
     font-size: 24px;
     line-height: 21px;
     font-weight: 700;
@@ -1483,6 +1484,7 @@ p.first-paragraph {
 
 .second-slider {
     position: absolute;
+    top: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4007,7 +4009,9 @@ body {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
+        height: 138px;
     }
+
 
     .logo {
         margin-right: 238px;
