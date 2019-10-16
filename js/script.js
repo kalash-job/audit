@@ -119,18 +119,13 @@ if (title.text === 'Сайт аудиторской компании ООО "А�
             var countDisplayBlock = 0;
             var changingDisplayBlock = 0;
             for (i = 0; i < services.length; i++) {
-                console.log(getComputedStyle(services[i]).display);
-
                 if (getComputedStyle(services[i]).display === 'block' && countLeft === 0) {
                     countLeft += 1;
-                    console.log('зашли в 1-й if', 'i=' + i, 'countLeft=' + countLeft);
                     services[i].style.display = 'none';
                     changingDisplayBlock = i;
                 }
-                console.log(getComputedStyle(services[i]).display);
                 if (i > 0 && getComputedStyle(services[i]).display === 'none' && getComputedStyle(services[i - 1]).display === 'block' && countRight === 0) {
                     countRight += 1;
-                    console.log('зашли в 2-й if', 'i=' + i, 'countRight=' + countRight);
                     services[i].style.display = "block";
                 }
                 /*счетчик элементов с display = "block"*/
@@ -149,12 +144,10 @@ if (title.text === 'Сайт аудиторской компании ООО "А�
                 for (i = 1; i < services.length; i++) {
                     if (getComputedStyle(services[i - 1]).display === "none" && getComputedStyle(services[i]).display === "block" && countLeft === 0) {
                         countLeft += 1;
-                        console.log('зашли в 3-й if');
                         services[i - 1].style.display = "block";
                     }
                     if (i > 0 && getComputedStyle(services[i]).display === "none" && getComputedStyle(services[i - 1]).display === "block" && countRight === 0) {
                         countRight += 1;
-                        console.log('зашли в 4-й if');
                         services[i - 1].style.display = "none";
                     } else if (i === services.length - 1 && getComputedStyle(services[i]).display === "block" && getComputedStyle(services[i - 1]).display === "block" && countRight === 0) {
                         services[i].style.display = "none";
@@ -199,7 +192,6 @@ if (title.text === 'Сайт аудиторской компании ООО "А�
 
 
 }
-
 
 /*Открытие и закрытие увеличенных изображений отзывов и лицензий*/
 if (title.text === 'Страница "Отзывы" сайта ООО "Аудит-Эксперт Бизнес"') {
@@ -261,18 +253,14 @@ if (title.text === 'Страница "О компании ООО "Аудит-Э�
             var countDisplayBlock = 0;
             var changingDisplayBlock = 0;
             for (i = 0; i < feedbacks.length; i++) {
-                console.log(getComputedStyle(feedbacks[i]).display);
 
                 if (getComputedStyle(feedbacks[i]).display === 'block' && countLeft === 0) {
                     countLeft += 1;
-                    console.log('зашли в 1-й if', 'i=' + i, 'countLeft=' + countLeft);
                     feedbacks[i].style.display = 'none';
                     changingDisplayBlock = i;
                 }
-                console.log(getComputedStyle(feedbacks[i]).display);
                 if (i > 0 && getComputedStyle(feedbacks[i]).display === 'none' && getComputedStyle(feedbacks[i - 1]).display === 'block' && countRight === 0) {
                     countRight += 1;
-                    console.log('зашли в 2-й if', 'i=' + i, 'countRight=' + countRight);
                     feedbacks[i].style.display = "block";
                 }
                 /*счетчик элементов с display = "block"*/
@@ -291,12 +279,10 @@ if (title.text === 'Страница "О компании ООО "Аудит-Э�
                 for (i = 1; i < feedbacks.length; i++) {
                     if (getComputedStyle(feedbacks[i - 1]).display === "none" && getComputedStyle(feedbacks[i]).display === "block" && countLeft === 0) {
                         countLeft += 1;
-                        console.log('зашли в 3-й if');
                         feedbacks[i - 1].style.display = "block";
                     }
                     if (i > 0 && getComputedStyle(feedbacks[i]).display === "none" && getComputedStyle(feedbacks[i - 1]).display === "block" && countRight === 0) {
                         countRight += 1;
-                        console.log('зашли в 4-й if');
                         feedbacks[i - 1].style.display = "none";
                     } else if (i === feedbacks.length - 1 && getComputedStyle(feedbacks[i]).display === "block" && getComputedStyle(feedbacks[i - 1]).display === "block" && countRight === 0) {
                         feedbacks[i].style.display = "none";
@@ -306,17 +292,13 @@ if (title.text === 'Страница "О компании ООО "Аудит-Э�
         }
         /*отключение стрелок в крайних положениях*/
         if (getComputedStyle(feedbacks[0]).display === "block") {
-            console.log('зашли в отключение стрелок в крайних положениях 1-й if');
             previousFeedback.style.display = "none";
         } else if (getComputedStyle(feedbacks[0]).display === "none") {
-            console.log('зашли в отключение стрелок в крайних положениях 1-й else');
             previousFeedback.style.display = "block";
         }
         if (getComputedStyle(feedbacks[feedbacks.length - 1]).display === "block") {
-            console.log('зашли в отключение стрелок в крайних положениях 2-й if');
             nextFeedback.style.display = "none";
         } else if (getComputedStyle(feedbacks[feedbacks.length - 1]).display === "none") {
-            console.log('зашли в отключение стрелок в крайних положениях 2-й else');
             nextFeedback.style.display = "block";
         }
     }
