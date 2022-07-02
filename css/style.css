@@ -2432,6 +2432,98 @@ p.first-paragraph {
     }
 }
 
+/*Страница Сведения о компании*/
+.main-company {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: left;
+    color: #414141;
+    background-color: #f0f2f1;
+    padding-left: 5px;
+    padding-bottom: 20px;
+}
+
+.company-article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.company-text {
+    width: 320px;
+}
+
+.main-company h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #64a0bc;
+    text-transform: uppercase;
+}
+
+.company-photo {
+    position: relative;
+    background-image: url("../img/company-photo.jpg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    z-index: 30;
+    width: 370px;
+    height: 279px;
+    margin-bottom: -15%;
+}
+
+/* Планшетная версия */
+@media (min-width: 768px) {
+    .company-photo {
+        background-size: cover;
+        margin-bottom: 0;
+    }
+
+    .company-text {
+        width: 620px;
+    }
+}
+
+/* Десктопная версия 1*/
+@media (min-width: 1200px) {
+    .breadcrumbs {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-company {
+        width: 1174px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 70px;
+    }
+
+    .company-article {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+
+    .company-photo {
+        margin-right: 29px;
+        margin-top: 18px;
+    }
+
+    .company-text {
+        width: 790px;
+    }
+}
+
 /*Страница второго уровня вложености (тип 1) */
 
 /*Страница Лицензии и свидетельства*/
