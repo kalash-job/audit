@@ -1657,6 +1657,7 @@ p.first-paragraph {
 
     .history-text {
         width: 620px;
+        text-align: justify;
     }
 }
 
@@ -2280,6 +2281,7 @@ p.first-paragraph {
 
     .team-text {
         width: 620px;
+        text-align: justify;
     }
 }
 
@@ -2394,6 +2396,7 @@ p.first-paragraph {
 
     .customers-text {
         width: 620px;
+        text-align: justify;
     }
 }
 
@@ -2486,6 +2489,7 @@ p.first-paragraph {
 
     .company-text {
         width: 620px;
+        text-align: justify;
     }
 }
 
@@ -2911,6 +2915,12 @@ p.first-paragraph {
 
     .audit-text {
         width: 620px;
+        text-align: justify;
+    }
+
+    .audit-text p,
+    .audit-text li {
+        text-align: inherit;
     }
 }
 
@@ -3014,6 +3024,12 @@ p.first-paragraph {
 
     .accounting-text {
         width: 620px;
+        text-align: justify;
+    }
+
+    .accounting-text p,
+    .accounting-text li {
+        text-align: inherit;
     }
 }
 
@@ -3125,6 +3141,12 @@ p.first-paragraph {
 
     .mconsulting-text {
         width: 620px;
+        text-align: justify;
+    }
+
+    .mconsulting-text p,
+    .mconsulting-text li {
+        text-align: inherit;
     }
 }
 
@@ -3228,6 +3250,12 @@ p.first-paragraph {
 
     .taxconsulting-text {
         width: 620px;
+        text-align: justify;
+    }
+
+    .taxconsulting-text p,
+    .taxconsulting-text li {
+        text-align: inherit;
     }
 }
 
@@ -3331,6 +3359,12 @@ p.first-paragraph {
 
     .fea-text {
         width: 620px;
+        text-align: justify;
+    }
+
+    .fea-text p,
+    .fea-text li {
+        text-align: inherit;
     }
 }
 
@@ -3434,6 +3468,12 @@ p.first-paragraph {
 
     .bconsulting-text {
         width: 620px;
+        text-align: justify;
+    }
+
+    .bconsulting-text p,
+    .bconsulting-text li {
+        text-align: inherit;
     }
 }
 
@@ -3537,6 +3577,12 @@ p.first-paragraph {
 
     .cas-text {
         width: 620px;
+        text-align: justify;
+    }
+
+    .cas-text p,
+    .cas-text li {
+        text-align: inherit;
     }
 }
 
@@ -3640,6 +3686,12 @@ p.first-paragraph {
 
     .bpm-text {
         width: 620px;
+        text-align: justify;
+    }
+
+    .bpm-text p,
+    .bpm-text li {
+        text-align: inherit;
     }
 }
 
@@ -3748,6 +3800,12 @@ p.first-paragraph {
 
     .news-text {
         width: 620px;
+        text-align: justify;
+    }
+
+    .news-text p,
+    .news-text li {
+        text-align: inherit;
     }
 }
 
@@ -3870,6 +3928,12 @@ p.first-paragraph {
 
     .vacancies-text {
         width: 620px;
+        text-align: justify;
+    }
+
+    .vacancies-text p,
+    .vacancies-text li {
+        text-align: inherit;
     }
 }
 
@@ -4003,6 +4067,12 @@ iframe {
 
     .contacts-text {
         width: 620px;
+        text-align: justify;
+    }
+
+    .contacts-text p,
+    .contacts-text li {
+        text-align: inherit;
     }
 }
 
